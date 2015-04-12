@@ -1,26 +1,16 @@
 // does 'whole head' conflict with 'lenses' by transitivity?
-// "backpack" and below are manually entered from prefabs
-// TODO: parse prefabs and populate this list
 conflicts_table = {
-	'glasses' : ['face', 'lenses', 'pyrovision_goggles', 'marxman'],
-	'whole_head' : ['hat', 'face', 'glasses'],
-	'medal' : ['tournament_medal'],
-	'backpack' : ['back'],
-	'hat' : ['cannonball'],
-	'mask' : ['head_skin'],
-	'weapon_targe' : ['arms'],
-	'shirt' : ['triad_trinket'],
-	'champ_stamp' : ['arm_tatoos'],
+	'glasses' : ['face', 'lenses'],
+	'whole_head' : ['hat', 'face', 'glasses', 'lenses'],
 };
 
 function has_conflicts(itema, itemb){
-	if(typeof itema == 'undefined' || typeof itemb == 'undefined'){
-		return false;
-	}
+	if(typeof itema == 'undefined' || typeof itemb == 'undefined') return false;
+
 	eqa = itema['equip_regions'];
 	eqb = itemb['equip_regions'];
 
-	console.log('[' + eqa + '] vs [' + eqb + ']');
+	// console.log('[' + eqa + '] vs [' + eqb + ']');
 
 	// 1. Simple checks first
 	has_simple_conflict = eqa.some(function(x){return eqb.indexOf(x)>-1});
@@ -31,11 +21,11 @@ function has_conflicts(itema, itemb){
 	var table_check = function(eq1, eq2){
 		// 2.1. does the first item (eq1) have a region that is present in the conflicts_table?:
 		var problematic_regions = eq1.map(function(x){return conflicts_table[x]});
-		// map() will return a list with a single 'undefined' instead of an empty list
+		// map() returns a list with a single 'undefined' instead of an empty list
 		if(typeof problematic_regions[0] === 'undefined') return false;
+
 		// 2.2. flatten when there are multiple conflict-able regions
 		var problematic_regions = problematic_regions.reduce(function(a,b){return a.concat(b)});
-
 		// 2.3. does the second item (eq2) has some() of these conflicting regions?:
 		var has_conflict = problematic_regions.some(function(x){return eq2.indexOf(x)>-1});
 		return has_conflict;
