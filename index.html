@@ -14,7 +14,10 @@ pre { white-space: pre-wrap; font-family: monospace; color: #e6e1dc; background-
 body { font-family: monospace; color: #e6e1dc; background-color: #151515; }
 * { font-size: 1em; }
 .LineNr { color: #665544; background-color: #101010; padding-bottom: 1px; }
+.LineNr { color: #665544; background-color: #101010; padding-bottom: 1px; }
 .Link { color: #665544; background-color: #101010; padding-bottom: 1px; }
+.Expander:link { color: #5a647e; background-color: #202020; padding-bottom: 1px; text-decoration: none; }
+.Expander:visited { color: #5a647e; background-color: #202020; padding-bottom: 1px; text-decoration: none; }
 .Folded { color: #5a647e; background-color: #202020; padding-bottom: 1px; }
 .FoldColumn { color: #505050; background-color: #050505; padding-bottom: 1px; }
 .FoldColumn { text-decoration: none; white-space: pre; }
@@ -91,13 +94,13 @@ if ('onhashchange' in window) {
 <span class="FoldColumn">  </span><span id="L3" class="LineNr"> 3 </span>What are you even doing here?
 <span class="FoldColumn">  </span><span id="L4" class="LineNr"> 4 </span>
 <span class="FoldColumn">  </span><span id="L5" class="LineNr"> 5 </span>Contact Info:
-<span id='fold1' class='closed-fold'><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold1");'>+</a><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold1");'> </a><a href='#' class='toggle-closed FoldColumn' onclick='javascript:toggleFold("fold1");'>- </a><span class="Folded"> 6 </span><span class="Folded">+--  3 lines: &lt;expand for more&gt;
+<span id='fold1' class='closed-fold'><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold1");'>+</a><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold1");'> </a><a href='#' class='toggle-closed FoldColumn' onclick='javascript:toggleFold("fold1");'>- </a><span class="Folded"> 6 </span><span class="Folded">+--  3 lines: <a href='#' class='Expander' onclick='javascript:toggleFold("fold1");'>&lt;unfold for more&gt;</a>
 </span><span class='fulltext'><span id="L6" class="LineNr"> 6 </span>&emsp;Ha, you thought it would be that easy?
 <a href='#' class='FoldColumn' onclick='javascript:toggleFold("fold1");'>| </a><span id="L7" class="LineNr"> 7 </span>&emsp;You have to dig deeper, it's all here.
 <a href='#' class='FoldColumn' onclick='javascript:toggleFold("fold1");'>| </a><span id="L8" class="LineNr"> 8 </span>&emsp;<i>Who is</i> VESSO?
 </span></span><span class="FoldColumn">  </span><span id="L9" class="LineNr"> 9 </span>
 <span class="FoldColumn">  </span><span id="L10" class="LineNr">10 </span>Links:
-<span id='fold2' class='closed-fold'><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold2");'>+</a><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold2");'> </a><a href='#' class='toggle-closed FoldColumn' onclick='javascript:toggleFold("fold2");'>- </a><span class="Folded">11 </span><span class="Folded">+--  2 lines: &lt;expand for more&gt;
+<span id='fold2' class='closed-fold'><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold2");'>+</a><a href='#' class='toggle-open FoldColumn' onclick='javascript:toggleFold("fold2");'> </a><a href='#' class='toggle-closed FoldColumn' onclick='javascript:toggleFold("fold2");'>- </a><span class="Folded">11 </span><span class="Folded">+--  2 lines: <a href='#' class='Expander' onclick='javascript:toggleFold("fold2");'>&lt;unfold for more&gt;</a>
 </span><span class='fulltext'><span id="L11" class="LineNr">11 </span>&emsp;<a href="https://github.com/vsomlev" class="Link"><u>My GitHub</u></a>
 <a href='#' class='FoldColumn' onclick='javascript:toggleFold("fold2");'>| </a><span id="L12" class="LineNr">12 </span>&emsp;<a href="/loadout/" class="Link"><u>TF2 Loadout Compatibility Check</u></a>
 </span></span><span class="FoldColumn">  </span><span id="L13" class="LineNr">13 </span>
