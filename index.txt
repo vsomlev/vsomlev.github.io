@@ -3,9 +3,12 @@ Hello!
 What are you even doing here?
 
 Contact Info:
-Ha, you thought it would be that easy? You have to dig deeper, it's all here. Who is VESSO?
+Ha, you thought it would be that easy? 
+You have to dig deeper, it's all here. 
+Who is VESSO?
 
 Links:
-None... for now.
+GitHub
+TF2 Loadout Compatibility
 
 :wq
